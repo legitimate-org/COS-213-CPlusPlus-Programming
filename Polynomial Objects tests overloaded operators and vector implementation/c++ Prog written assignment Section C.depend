@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1397927789 source:c:\users\ben jenkins\documents\c++\c++ prog written assignment section c\main.cpp
+	<iostream>
+	"Polynomial.h"
+
+1397928027 source:c:\users\ben jenkins\documents\c++\c++ prog written assignment section c\src\polynomial.cpp
+	"Polynomial.h"
+	<iostream>
+	<cstdlib>
+	<cstdio>
+
+1397927879 c:\users\ben jenkins\documents\c++\c++ prog written assignment section c\include\polynomial.h
+	<iostream>
+
