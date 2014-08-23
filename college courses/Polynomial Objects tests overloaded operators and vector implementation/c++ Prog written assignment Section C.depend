@@ -12,3 +12,16 @@
 1397927879 c:\users\ben jenkins\documents\c++\c++ prog written assignment section c\include\polynomial.h
 	<iostream>
 
+1408764802 source:c:\users\ben jenkins\documents\github svn\c++ programming\trunk\college courses\polynomial objects tests overloaded operators and vector implementation\main.cpp
+	<iostream>
+	"Polynomial.h"
+
+1408764396 c:\users\ben jenkins\documents\github svn\c++ programming\trunk\college courses\polynomial objects tests overloaded operators and vector implementation\include\polynomial.h
+	<iostream>
+
+1408764610 source:c:\users\ben jenkins\documents\github svn\c++ programming\trunk\college courses\polynomial objects tests overloaded operators and vector implementation\src\polynomial.cpp
+	"Polynomial.h"
+	<iostream>
+	<cstdlib>
+	<cstdio>
+

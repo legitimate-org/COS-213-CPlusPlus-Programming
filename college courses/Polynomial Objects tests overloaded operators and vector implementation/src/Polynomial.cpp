@@ -158,7 +158,7 @@ double Polynomial::get(double exponent) const
     }
 }
 
-void Polynomial::print()
+void Polynomial::_print(ostream& os) const
 {
     // If it isn't sorted, sort
     if(!isSorted())
@@ -172,23 +172,37 @@ void Polynomial::print()
         if(list[i].coefficient != 0)// If the coefficient has a value
         {
             // Print the term
-            std::cout << list[i].coefficient;
+            os << list[i].coefficient;
             if(list[i].exponent != 0)// If the exponent isn't 0, print the exponent.
             {
-                std::cout << "x^" << list[i].exponent;
+                os << "x^" << list[i].exponent;
             }
 
             // If it isn't the last term, print a plus sign
             if(i != currentSize - 1)
             {
-                std::cout << " + ";
+                os << " + ";
             }
         }
     }
+}
+
+void Polynomial::print()
+{
+    std::cout << " ";
+    this->_print(std::cout);
     std::cout << std::endl;
 }
 
-bool Polynomial::isSorted()
+ostream& operator<<(ostream& os, const Polynomial& otherP)
+{
+    os << "{";
+    otherP._print(os);
+    os << "}";
+    return os;
+}
+
+bool Polynomial::isSorted() const
 {
     // Checks to see if each item is sorted in descending order.
     for(unsigned int i = 0; i < currentSize - 1; ++i)
@@ -201,7 +215,7 @@ bool Polynomial::isSorted()
     return true;
 }
 
-void Polynomial::sort()
+void Polynomial::sort() const
 {
     // Implemented a selection sort.
     for(unsigned int i = 0; i < currentSize; ++i)

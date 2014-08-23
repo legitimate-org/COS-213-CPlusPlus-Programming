@@ -1,6 +1,7 @@
 #ifndef POLYNOMIAL_H
 #define POLYNOMIAL_H
 #include <iostream>
+using namespace std;
 
 
 class Polynomial
@@ -15,6 +16,7 @@ public:
     virtual ~Polynomial();// Destroys list.
     int findExponent(double) const;// Returns index of exponent
     int size() const;
+    friend ostream& operator<<(ostream& os, const Polynomial& otherP);
     struct termT
     {
         double coefficient;
@@ -24,8 +26,9 @@ protected:
 private:
     unsigned int currentSize;
     unsigned int allocatedSize;
-    bool isSorted();
-    void sort();
+    void _print(ostream& os) const;
+    bool isSorted() const;
+    void sort() const;
     void expandList();// Allocates more slots when array fills up
     termT* list;// Contains a list of all terms inside the Polynomial
 };
