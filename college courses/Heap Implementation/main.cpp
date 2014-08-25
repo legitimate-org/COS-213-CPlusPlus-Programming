@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 #include <iostream>
 
 /*Array that stores elements in the heap */ 
@@ -31,8 +32,24 @@ void display()
         printf("Heap is empty \n");
         return;
     }
-    for (i = 0; i < n; i++)
-        printf("%d ", array[i]);
+    printf("\n");
+    int powerOfTwo = 0;
+    int maxNum = 0;
+    int midPoint = -1;
+    for (i = 0; i < n; i++){
+        printf("%3d ", array[i]);
+        if(i == maxNum){
+            printf("\n");
+            powerOfTwo++;
+            midPoint = maxNum;
+            maxNum += pow(2, powerOfTwo);
+            midPoint = (midPoint + maxNum) / 2;
+        }
+        if(i == midPoint){
+            printf("|");
+        }
+    }
+        
     printf("\n");
 }/*End of display()*/
  
@@ -42,7 +59,7 @@ int main() {
     /* Prompt for the number of elements */
     printf("Enter the number of elements: ");
     /* Read in the number of elements */
-    no_of_elements = 10;
+    no_of_elements = 15;
 
     printf("Enter the %d elements: ",no_of_elements);
     /* Read elements one after the other and insert

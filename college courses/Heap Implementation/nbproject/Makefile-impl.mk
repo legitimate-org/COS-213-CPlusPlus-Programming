@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=C++ Discussion Forum 5
+PROJECTNAME=Heap Implementation
 
 # Active Configuration
 DEFAULTCONF=Debug
